@@ -87,7 +87,7 @@ function Preview({settings}) {
   };
   // возвращаем разметку
   return (
-    <section className='preview' style={preview_style} id='preview'>
+    <section className='preview' id='preview'>
       <div className='banner' style={banner_style} id='capture'>
         <img src={settings.imgURL} alt='' style={banner_img_style} id='banner_img'/>
         <div  style={banner_text_style} suppressContentEditableWarning={true} id='banner_text'> Write your awesome text here</div>
