@@ -1,0 +1,13 @@
+#banner_img:hover{
+  cursor: move;
+}
+#banner_text:hover{
+  cursor: move;
+  outline: 1px solid #fff;
+}
+.banner{
+  margin: 0 auto;
+}
+.preview{
+  margin-bottom: 30px;
+}

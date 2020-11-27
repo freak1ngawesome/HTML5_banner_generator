@@ -1,0 +1,120 @@
+.customization{
+  margin-bottom: 30px;
+}
+.customization__block{
+  position: relative;
+  padding-top: 20px;
+}
+.customization__block:before,
+.customization__block:after{
+  position: absolute;
+  top: 0;
+  content: '';
+  width:calc(50% - 40px);
+  height: 4px;
+  display: block;
+  background: #000;
+}
+.customization__block:before{
+  left: 0;
+}
+.customization__block:after{
+  right: 0;
+}
+.customization__form{
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  display: none;
+  transition: 1s;
+  height: 200px;
+  overflow-y: auto;
+}
+.customizer_btn{
+  font-size: 20px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  background: #000;
+  color: #fff;
+  transition: 1s;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  border-radius: 0;
+}
+.customizer_btn:hover{
+  background: #fff;
+  color: #000;
+  outline: 1px solid #000;
+}
+.customizer_btn:active{
+  top: -5px;
+}
+.customization__form_item{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0;
+}
+.customization__form_inputs{
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.banner_sizes span{
+  line-height: 28px;
+  font-weight: 700;
+}
+.customization__form_text{
+  margin: 0 10px;
+}
+.customization__block input{
+  border: 1px solid black;
+  padding-left: 5px;
+}
+.customization__block input[type='color']{
+  border: none;
+  background: none;
+  outline: none;
+  transform: scale(1.2);
+}
+
+@media(max-height: 960px){
+  .customization__form{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    display: none;
+    left: 50%;
+    z-index: 999;
+    transform: translateX(-50%);
+    background: rgb(255, 255, 255);
+    outline: rgb(0, 0, 0) solid 1px;
+  }
+}
+@media(max-height: 642px){
+  .customization{
+    margin-bottom: 10px;
+  }
+}
+@media(max-width: 900px){
+  .customizer_btn:hover{
+    background: #000;
+    color: #fff;
+    outline: none;
+  }
+}
+@media(max-width: 700px){
+  .customization__form{
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+  }
+  .customization__block input{
+    width: 100%;
+  }
+}
