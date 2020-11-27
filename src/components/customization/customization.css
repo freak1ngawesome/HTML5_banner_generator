@@ -53,6 +53,26 @@
 .customizer_btn:active{
   top: -5px;
 }
+.reset_btn{
+  position: relative;
+  font-size: 20px;
+  background: #000;
+  color: #fff;
+  transition: 1s;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  margin: 0 0 10px 10px;
+}
+.reset_btn:hover{
+  background: #fff;
+  color: #000;
+  outline: 1px solid #000;
+}
+.reset_btn:active{
+  top: -5px;
+}
 .customization__form_item{
   padding: 5px;
   display: flex;
@@ -103,6 +123,11 @@
 }
 @media(max-width: 900px){
   .customizer_btn:hover{
+    background: #000;
+    color: #fff;
+    outline: none;
+  }
+  .reset_btn:hover{
     background: #000;
     color: #fff;
     outline: none;

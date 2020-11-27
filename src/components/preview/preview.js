@@ -1,20 +1,20 @@
+// импортируем зависимости
 import {connect} from 'react-redux';
 import {useEffect } from 'react';
 import './preview.css';
 
+// функциональный компонент превью
 function Preview({settings}) {
 
-  const preview_style = {
-    // border: '2px solid black',
-  };
-  const banner_style = {
+  // объекты со стилями для элементов превью, в настраиваемые свойства помещаем значения из settings
+  const banner_style = { // сам баннер
     position: 'relative',
     width: settings.bannerSizeX + 'px',
     height: settings.bannerSizeY + 'px',
     background: settings.background,
     overflow: 'hidden',
   };
-  const banner_text_style = {
+  const banner_text_style = { // текст на баннере
     width: '100%',
     position: 'absolute',
     top: '50%',
@@ -28,25 +28,25 @@ function Preview({settings}) {
     overflow: 'hidden',
     userSelect: 'none',
   };
-  const banner_img_style = {
+  const banner_img_style = { // изображение на баннере
     position: 'absolute',
     top: '0',
     left: '0',
   };
-   
-
+  // useEffect используется для симуляции в функциональном компоненте ComponentDidMount()
   useEffect(() => {
-    const banner = document.querySelector('.banner');
-    const bannerImg = document.getElementById('banner_img');
-    const bannerText = document.getElementById('banner_text');
-    dragAndDrop(bannerImg,banner);
-    dragAndDrop(bannerText,banner);
+    const banner = document.querySelector('.banner'); // получаем баннер
+    const bannerImg = document.getElementById('banner_img'); // получаем картинку на баннере
+    const bannerText = document.getElementById('banner_text'); // получаем текст на баннере
+    dragAndDrop(bannerImg,banner); // запускаем функцию драг'анд'дроп на картинку
+    dragAndDrop(bannerText,banner); // запускаем функцию драг'анд'дроп на текст
+    // ниже обрабатывается логика редактирования текста, который доступен после двойного клика на текст
     bannerText.addEventListener('dblclick', () => {
-      bannerText.setAttribute('contenteditable','true');
-      bannerText.style.cursor = 'text';
-      bannerText.style.userSelect = 'auto';
-      bannerText.onmousedown = null;
-      bannerText.addEventListener('blur', () => {
+      bannerText.setAttribute('contenteditable','true'); // при даблклике добавляем возможность редактировать текст
+      bannerText.style.cursor = 'text'; // меняем курсор
+      bannerText.style.userSelect = 'auto'; // добавляем возможность выделять текст
+      bannerText.onmousedown = null; // убираем прослушку нажатия на текст
+      bannerText.addEventListener('blur', () => { // в момент ухода с текста фокуса возвращаем все назад, текст снова в состоянии перемещения
         bannerText.setAttribute('contenteditable','false');
         bannerText.style.cursor = 'move';
         bannerText.style.userSelect = 'none';
@@ -57,10 +57,6 @@ function Preview({settings}) {
   },[])
   
   function dragAndDrop (elem,parent){
-    
-    
-    
-
     elem.onmousedown = function(event) { // по нажатию на объект
       const startX = parent.getBoundingClientRect().left; // определем начало отсчета по X
       const startY = parent.getBoundingClientRect().top; // определем начало отсчета по Y
@@ -71,48 +67,39 @@ function Preview({settings}) {
       function moveAt(pageX, pageY) { // перезапись свойств left и top у объекта на основе вычислений разности изначального положения и текущего
         elem.style.left = pageX - shiftX - startX + 'px';
         elem.style.top = pageY - shiftY - startY + 'px';
-        
-      }
+      };
 
       function onMouseMove(event) {
         moveAt(event.pageX, event.pageY); // передвигаем объект, после начальной выставки
-      }
+      };
 
       document.addEventListener('mousemove', onMouseMove); // передвигаем объект при событии mousemove
     
       elem.onmouseup = function() { // отпустить объект, удалить обработчики
         document.removeEventListener('mousemove', onMouseMove);
         elem.onmouseup = null;
-        
       };
-    
     };
     
     elem.ondragstart = function() { // отменим событие браузерного дрэгга
       return false;
     };
-  }
-
-  
-
+  };
+  // возвращаем разметку
   return (
-    <>
-      <section className='preview' style={preview_style} id='preview'>
-        <div className='banner' style={banner_style} id='capture'>
-
-            <img src={settings.imgURL} alt='' style={banner_img_style} id='banner_img'/>
-            <div  style={banner_text_style} suppressContentEditableWarning={true} id='banner_text'> Write your awesome text here</div>
-
-        </div>
-      </section>
-  </>
+    <section className='preview' style={preview_style} id='preview'>
+      <div className='banner' style={banner_style} id='capture'>
+        <img src={settings.imgURL} alt='' style={banner_img_style} id='banner_img'/>
+        <div  style={banner_text_style} suppressContentEditableWarning={true} id='banner_text'> Write your awesome text here</div>
+      </div>
+    </section>
   );
-}
-
+};
+// прокидываем настройки в компонент
 const mapStateToProps = (state) => {
   return {
     settings: state
   }
-}
-
+};
+// экспортируем компонент
 export default connect(mapStateToProps)(Preview);
