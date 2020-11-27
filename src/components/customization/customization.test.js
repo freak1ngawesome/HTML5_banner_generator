@@ -1,14 +1,12 @@
 import React from 'react';
 import Customization from './customization';
-import {shallow} from 'enzyme';
-import '../../setupTests';
-import store from '../../store'
+import renderer from 'react-test-renderer';
+import store from '../../store';
 
 describe('Testing <Customization/>', () => {
-  const custom = shallow(<Customization store={store}/>);
+  const custom = renderer.create(<Customization store={store}/>).toJSON();
 
   it('Component has rendered correctly',() => {
     expect(custom).toMatchSnapshot();
   });
-
 });

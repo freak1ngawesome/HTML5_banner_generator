@@ -1,3 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing <Export/> Component has rendered correctly 1`] = `ShallowWrapper {}`;
+exports[`Testing <Export/> Component has rendered correctly 1`] = `
+Array [
+  <section
+    className="export"
+  >
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Save as .png
+    </button>
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Copy as HTML5 string
+    </button>
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Copy settings
+    </button>
+  </section>,
+  <p
+    className="notification"
+  />,
+]
+`;

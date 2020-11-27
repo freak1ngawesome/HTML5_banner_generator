@@ -1,3 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing <Preview/> Component has rendered correctly 1`] = `ShallowWrapper {}`;
+exports[`Testing <Preview/> Component has rendered correctly 1`] = `
+<section
+  className="preview"
+  id="preview"
+>
+  <div
+    className="banner"
+    id="capture"
+    style={
+      Object {
+        "background": "#000000",
+        "height": "376px",
+        "overflow": "hidden",
+        "position": "relative",
+        "width": "282px",
+      }
+    }
+  >
+    <img
+      alt=""
+      id="banner_img"
+      src=""
+      style={
+        Object {
+          "left": "0",
+          "position": "absolute",
+          "top": "0",
+        }
+      }
+    />
+    <div
+      id="banner_text"
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "monospace",
+          "fontSize": "44px",
+          "fontWeight": "700",
+          "height": "132px",
+          "left": "10px",
+          "lineHeight": "44px",
+          "overflow": "hidden",
+          "position": "absolute",
+          "top": "50%",
+          "userSelect": "none",
+          "width": "100%",
+        }
+      }
+      suppressContentEditableWarning={true}
+    >
+       Write your awesome text here
+    </div>
+  </div>
+</section>
+`;

@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <App/> rendering without crush Component has rendered correctly 1`] = `
+<div
+  className="container"
+>
+  <header
+    className="header"
+  >
+    <h1
+      className="header__heading"
+    >
+      Create your awesome banner
+    </h1>
+  </header>
+  <section
+    className="customization"
+  >
+    <div
+      className="customization__block"
+    >
+      <button
+        className="customizer_btn"
+        onClick={[Function]}
+      >
+        show
+      </button>
+      <form
+        className="customization__form"
+      >
+        <div
+          className="customization__form_item banner_sizes"
+        >
+          <h2
+            className="customization__form_label"
+          >
+            Banner size
+          </h2>
+          <div
+            className="customization__form_inputs"
+          >
+            <span>
+              X:
+            </span>
+            <input
+              className="customization__form_text"
+              onChange={[Function]}
+              type="text"
+              value="282"
+            />
+            <span>
+              Y:
+            </span>
+            <input
+              className="customization__form_text"
+              onChange={[Function]}
+              type="text"
+              value="376"
+            />
+          </div>
+        </div>
+        <div
+          className="customization__form_item background"
+        >
+          <h2
+            className="customization__form_label"
+          >
+            Background
+          </h2>
+          <div
+            className="customization__form_inputs"
+          >
+            <input
+              className="customization__form_color"
+              onInput={[Function]}
+              type="color"
+              value="#000000"
+            />
+            <input
+              className="customization__form_text"
+              onChange={[Function]}
+              type="text"
+              value="#000000"
+            />
+          </div>
+        </div>
+        <div
+          className="customization__form_item font_color"
+        >
+          <h2
+            className="customization__form_label"
+          >
+            Font color
+          </h2>
+          <div
+            className="customization__form_inputs"
+          >
+            <input
+              className="customization__form_color"
+              onInput={[Function]}
+              type="color"
+              value="#ffffff"
+            />
+            <input
+              className="customization__form_text"
+              onChange={[Function]}
+              type="text"
+              value="#ffffff"
+            />
+          </div>
+        </div>
+        <div
+          className="customization__form_item font_size"
+        >
+          <h2
+            className="customization__form_label"
+          >
+            Font size
+          </h2>
+          <div
+            className="customization__form_inputs"
+          >
+            <input
+              className="customization__form_text"
+              onChange={[Function]}
+              type="text"
+              value="44"
+            />
+          </div>
+        </div>
+        <div
+          className="customization__form_item imgURL"
+        >
+          <h2
+            className="customization__form_label"
+          >
+            Enter img link or URI
+          </h2>
+          <div
+            className="customization__form_inputs"
+          >
+            <input
+              className="customization__form_text"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="customization__form_item link"
+        >
+          <h2
+            className="customization__form_label"
+          >
+            Enter link to your site
+          </h2>
+          <div
+            className="customization__form_inputs"
+          >
+            <input
+              className="customization__form_text"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <button
+          className="reset_btn"
+          onClick={[Function]}
+        >
+          reset
+        </button>
+      </form>
+    </div>
+  </section>
+  <section
+    className="preview"
+    id="preview"
+  >
+    <div
+      className="banner"
+      id="capture"
+      style={
+        Object {
+          "background": "#000000",
+          "height": "376px",
+          "overflow": "hidden",
+          "position": "relative",
+          "width": "282px",
+        }
+      }
+    >
+      <img
+        alt=""
+        id="banner_img"
+        src=""
+        style={
+          Object {
+            "left": "0",
+            "position": "absolute",
+            "top": "0",
+          }
+        }
+      />
+      <div
+        id="banner_text"
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "monospace",
+            "fontSize": "44px",
+            "fontWeight": "700",
+            "height": "132px",
+            "left": "10px",
+            "lineHeight": "44px",
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": "50%",
+            "userSelect": "none",
+            "width": "100%",
+          }
+        }
+        suppressContentEditableWarning={true}
+      >
+         Write your awesome text here
+      </div>
+    </div>
+  </section>
+  <section
+    className="export"
+  >
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Save as .png
+    </button>
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Copy as HTML5 string
+    </button>
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Copy settings
+    </button>
+  </section>
+  <p
+    className="notification"
+  />
+</div>
+`;
