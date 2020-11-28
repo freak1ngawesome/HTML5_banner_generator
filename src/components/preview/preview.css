@@ -6,7 +6,8 @@
   outline: 1px solid #fff;
 }
 .banner{
-  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .preview{
   margin-bottom: 30px;

@@ -14,6 +14,7 @@ function Preview({settings}) {
     height: settings.bannerSizeY + 'px',
     background: settings.background,
     overflow: 'hidden',
+    
   };
   const banner_text_style = { // текст на баннере
     width: '100%',

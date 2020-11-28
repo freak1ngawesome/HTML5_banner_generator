@@ -98,7 +98,7 @@ const mapDispatchToProps = {
   linkChange,
   reset,
 };
-
+// проверка типов пропсов
 Customization.propTypes = {
   settings: PropTypes.object.isRequired,
   bgChange: PropTypes.func.isRequired,
