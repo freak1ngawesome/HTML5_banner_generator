@@ -4,9 +4,10 @@ import renderer from 'react-test-renderer';
 import store from '../../store';
 
 describe('Testing <Export/>', () => {
-  const exp = renderer.create(<Export store={store}/>).toJSON();
+  const exp = renderer.create(<Export store={store}/>);
 
   it('Component has rendered correctly',() => {
-    expect(exp).toMatchSnapshot();
+    expect(exp.toJSON()).toMatchSnapshot();
   });
+
 });

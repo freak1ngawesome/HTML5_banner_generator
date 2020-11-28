@@ -29,3 +29,33 @@ Array [
   />,
 ]
 `;
+
+exports[`Testing <Export/> Component has rendered correctly 2`] = `
+Array [
+  <section
+    className="export"
+  >
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Save as .png
+    </button>
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Copy as HTML5 string
+    </button>
+    <button
+      className="export__btn"
+      onClick={[Function]}
+    >
+      Copy settings
+    </button>
+  </section>,
+  <p
+    className="notification"
+  />,
+]
+`;

@@ -101,5 +101,8 @@ const mapStateToProps = (state) => {
     settings: state
   }
 };
+
+
+
 // экспортируем компонент
 export default connect(mapStateToProps)(Preview);

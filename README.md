@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# генератор HTML5 баннеров
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Проект сделан с помощью :
+  [Create React App](https://github.com/facebook/create-react-app),
+  [Redux](https://github.com/reduxjs/redux),
+  [html2canvas](https://github.com/niklasvh/html2canvas).
 
-## Available Scripts
+## Доступные команды
 
-In the project directory, you can run:a
+  В директории проекта вы можете запустить:a
+
+### `npm install`
+
+  для установки всех необходимых зависимостей из `package.json`
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  для запуска приложения в режиме разработки на [http://localhost:3999](http://localhost:3999)
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  для запуска имеющихся тестов
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  для получения оптимизированной продакшн версии
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  для самостоятельной настройки плагинов, операция в один конец
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Описание проекта
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Функционал
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  Данное приложение предназначено для быстрого создания несложных баннеров для различных целей на Вашем сайте. Приложение состоит из трех основных блоков:
 
-## Learn More
+#### Меню настройки баннера
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  Данное меню изначально находится в закрытом состоянии. Кликните по кнопке `show`, для просмотра возможных настроек баннера. В настройки входит: 
+    настройка цвета заднего фона, задается через соответствующее текстовое поле или палитру. Поддерживает установку градиента через текстовое поле;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    выбор цвета шрифта, через текстовое поле или палитру;
 
-### Code Splitting
+    выбор размера шрифта через текстовое поле;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    выбор размеров баннера по X и Y, через соответствующие текстовые поля;
 
-### Analyzing the Bundle Size
+    добавление картинки на баннер, путем указания ссылки на нее в соответствующем поле;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    добавление ссылки на сайт, через текстовое поле;
 
-### Making a Progressive Web App
+#### Превью баннера
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  На превью вы можете в реалном времени отслеживать все изменнения баннера.
+  Также, у вас есть возможность перемещать блок текста и изображения, путем перетаскивания их мышкой. Для этого нажмите на элемент ЛКМ, и не отпуская, перетащите в нужное место.
+  Для редактирования текста, нажмите на него два раза ЛКМ. Так вы попадете в режим редактирования и не сможете перемещать текст.
 
-### Advanced Configuration
+#### Кнопки экспорта
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  Тут предствавлены три кпопки: экспорт в .png, экспорт в формате HTML строки, сериализация настроек баннера в json.
+  В первом случае картинка скачивается на Ваше устройство. Остальные две кнопки копируют код в буфер обмена.
