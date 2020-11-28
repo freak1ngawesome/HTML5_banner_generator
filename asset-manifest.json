@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/banner-generator/static/css/main.bf6b76b5.chunk.css",
+    "main.js": "/banner-generator/static/js/main.af925bbc.chunk.js",
+    "main.js.map": "/banner-generator/static/js/main.af925bbc.chunk.js.map",
+    "runtime-main.js": "/banner-generator/static/js/runtime-main.ad63be27.js",
+    "runtime-main.js.map": "/banner-generator/static/js/runtime-main.ad63be27.js.map",
+    "static/js/2.2cb5ae53.chunk.js": "/banner-generator/static/js/2.2cb5ae53.chunk.js",
+    "static/js/2.2cb5ae53.chunk.js.map": "/banner-generator/static/js/2.2cb5ae53.chunk.js.map",
+    "index.html": "/banner-generator/index.html",
+    "static/css/main.bf6b76b5.chunk.css.map": "/banner-generator/static/css/main.bf6b76b5.chunk.css.map",
+    "static/js/2.2cb5ae53.chunk.js.LICENSE.txt": "/banner-generator/static/js/2.2cb5ae53.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad63be27.js",
+    "static/js/2.2cb5ae53.chunk.js",
+    "static/css/main.bf6b76b5.chunk.css",
+    "static/js/main.af925bbc.chunk.js"
+  ]
+}
