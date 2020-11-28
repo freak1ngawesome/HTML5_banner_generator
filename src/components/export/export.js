@@ -2,6 +2,7 @@
 import {connect} from 'react-redux';
 import './export.css'
 import html2canvas from 'html2canvas';
+import PropTypes from 'prop-types';
 
 // функциональный компонент Export
 function Export({link,settings}) {
@@ -99,5 +100,11 @@ const mapStateToProps = (state) => {
     settings: state,
   }
 };
-// жкспорт компонента
+// проверка типов пропсов
+Export.propTypes = {
+  link: PropTypes.string.isRequired,
+  settings: PropTypes.object.isRequired
+}
+
+// экспорт компонента
 export default connect(mapStateToProps)(Export);

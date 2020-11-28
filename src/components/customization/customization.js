@@ -2,6 +2,7 @@
 import {connect} from 'react-redux';
 import {bgChange,fontColorChange,fontSizeChange,bannerSizeXChange,bannerSizeYChange,imgChange,linkChange,reset} from '../../actions';
 import './customization.css';
+import PropTypes from 'prop-types';
 
 // функциональный компонент меню настройки баннера, передаются настройки и actions
 function Customization({settings,bgChange,fontColorChange,fontSizeChange,bannerSizeXChange,bannerSizeYChange,imgChange,linkChange,reset}) {
@@ -97,5 +98,17 @@ const mapDispatchToProps = {
   linkChange,
   reset,
 };
+
+Customization.propTypes = {
+  settings: PropTypes.object.isRequired,
+  bgChange: PropTypes.func.isRequired,
+  fontColorChange: PropTypes.func.isRequired,
+  fontSizeChange: PropTypes.func.isRequired,
+  bannerSizeXChange: PropTypes.func.isRequired,
+  bannerSizeYChange: PropTypes.func.isRequired,
+  imgChange: PropTypes.func.isRequired,
+  linkChange: PropTypes.func.isRequired,
+  reset: PropTypes.func.isRequired,
+}
 // экспортируем полученный компонент
 export default connect(mapStateToProps,mapDispatchToProps)(Customization);

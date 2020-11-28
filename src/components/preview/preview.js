@@ -2,6 +2,7 @@
 import {connect} from 'react-redux';
 import {useEffect } from 'react';
 import './preview.css';
+import PropTypes from 'prop-types';
 
 // функциональный компонент превью
 function Preview({settings}) {
@@ -102,7 +103,10 @@ const mapStateToProps = (state) => {
   }
 };
 
-
+// проверка типов пропсов
+Preview.propTypes = {
+  settings: PropTypes.object.isRequired,
+}
 
 // экспортируем компонент
 export default connect(mapStateToProps)(Preview);
