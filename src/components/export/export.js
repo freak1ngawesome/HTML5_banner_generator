@@ -10,6 +10,10 @@ function Export({link,settings}) {
   // функция для 'скриншота', испольуется библиотека html2canvas, в случае успеха получаем канвас
   const download = () => {
     const node = document.getElementById('capture');
+    const closedBtn = document.querySelector('.customizer_btn');
+    if (closedBtn.textContent === 'hide'){
+      closedBtn.click();
+    };
     html2canvas(node,{
       useCORS: true
     }).then(canvas => {

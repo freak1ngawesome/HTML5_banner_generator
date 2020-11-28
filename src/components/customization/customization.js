@@ -19,7 +19,7 @@ function Customization({settings,bgChange,fontColorChange,fontSizeChange,bannerS
       menu.style.display = 'none';
       e.target.textContent = 'show';
     };
-  }
+  };
 
   // делаем диструктуризацию настроек из settings
   const {background,fontColor,fontSize,bannerSizeX,bannerSizeY,imgURL,link} = settings;
