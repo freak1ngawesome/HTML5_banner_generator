@@ -1,4 +1,4 @@
-# генератор HTML5 баннеров
+# Генератор HTML5 баннеров
 
 Проект сделан с помощью :
   [Create React App](https://github.com/facebook/create-react-app),
