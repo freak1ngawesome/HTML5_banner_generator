@@ -1,13 +1,13 @@
 # Генератор HTML5 баннеров
 
 Проект сделан с помощью :
-  [Create React App](https://github.com/facebook/create-react-app),
-  [Redux](https://github.com/reduxjs/redux),
+  [Create React App](https://github.com/facebook/create-react-app),\n
+  [Redux](https://github.com/reduxjs/redux),\n
   [html2canvas](https://github.com/niklasvh/html2canvas).
 
 ## Доступные команды
 
-  В директории проекта вы можете запустить:a
+  В директории проекта вы можете запустить
 
 ### `npm install`
 
