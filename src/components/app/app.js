@@ -10,9 +10,10 @@ function App() {
   return (
     <div className='container'>
       <Header/>
+      <ExportButtons/>
       <CustomizationMenu/>
       <PreviewBox/>
-      <ExportButtons/>
+      
     </div>
   );
 }

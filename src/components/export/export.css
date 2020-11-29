@@ -33,7 +33,7 @@
   transform: translateX(-50%);
   background: black;
   display: none;
-  color: #fff;
+  color:rgba(255,255,255,1);
   padding: 10px;
   border-radius: 10px;
 }

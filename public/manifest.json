@@ -1,6 +1,17 @@
 {
- "name": "App",
- "icons": [
+  "lang": "en",
+  "scope": "/",
+  "display": "standalone",
+  "start_url": "https://freak1ngawesome.github.io/banner-generator",
+  "short_name": "banner-generator",
+  "theme_color": "#ffffff",
+  "description": "create your own HTML5 banner",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "related_application": "",
+  "prefer_related_application": "false",
+  "name": "Banner-generator",
+  "icons": [
   {
    "src": "\/android-icon-36x36.png",
    "sizes": "36x36",
