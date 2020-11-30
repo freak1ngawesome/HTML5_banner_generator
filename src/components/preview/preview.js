@@ -14,6 +14,7 @@ function Preview({settings}) {
     height: settings.bannerSizeY + 'px',
     background: settings.background,
     overflow: 'hidden',
+    borderRadius: '10px',
     
   };
   const banner_text_style = { // текст на баннере
@@ -61,9 +62,10 @@ function Preview({settings}) {
   function dragAndDrop (elem,parent){
     elem.onmousedown = function(event) { // по нажатию на объект
       const startX = parent.getBoundingClientRect().left; // определем начало отсчета по X
-      const startY = parent.getBoundingClientRect().top; // определем начало отсчета по Y
-      let shiftX = event.clientX - elem.getBoundingClientRect().left; // смещение курсова относительно центра объекта по X
-      let shiftY = event.clientY - elem.getBoundingClientRect().top; // смещение курсова относительно центра объекта по Y
+      const startY = parent.getBoundingClientRect().top + document.documentElement.scrollTop; // определем начало отсчета по Y с учетом прокрутки
+      // console.log(document.documentElement.scrollTop);
+      let shiftX = event.clientX - elem.getBoundingClientRect().left; // смещение курсора относительно центра объекта по X
+      let shiftY = event.clientY - elem.getBoundingClientRect().top; // смещение курсора относительно центра объекта по Y
       moveAt(event.pageX, event.pageY);
 
       function moveAt(pageX, pageY) { // перезапись свойств left и top у объекта на основе вычислений разности изначального положения и текущего
