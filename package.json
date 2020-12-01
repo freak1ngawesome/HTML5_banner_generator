@@ -2,7 +2,7 @@
   "name": "banner_creater",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://freak1ngawesome.github.io/banner-generator",
+  "homepage": "https://freak1ngawesome.github.io/HTML5_banner_generator",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",

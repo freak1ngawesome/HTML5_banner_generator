@@ -8,16 +8,13 @@ import PropTypes from 'prop-types';
 function Export({link,settings}) {
 
   // функция для 'скриншота', испольуется библиотека html2canvas, в случае успеха получаем канвас
-  const download = () => {
+   const download = () => {
     const node = document.getElementById('capture');
     window.scrollTo({
       top: 0,
-      behavior: "instant"
+      behavior: "instant",
     });
-    // const closedBtn = document.querySelector('.customizer_btn');// закрываем меню настроек
-    // if (closedBtn.textContent === 'hide'){
-    //   closedBtn.click();
-    // };
+
 
     html2canvas(node,{
       useCORS: true
