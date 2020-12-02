@@ -9,7 +9,7 @@ function Preview({settings}) {
 
   // объекты со стилями для элементов превью, в настраиваемые свойства помещаем значения из settings
   const banner_style = { // сам баннер
-    position: 'relative',
+    position: 'absolute',
     width: settings.bannerSizeX + 'px',
     height: settings.bannerSizeY + 'px',
     background: settings.background,
@@ -63,7 +63,6 @@ function Preview({settings}) {
     elem.onmousedown = function(event) { // по нажатию на объект
       const startX = parent.getBoundingClientRect().left; // определем начало отсчета по X
       const startY = parent.getBoundingClientRect().top + document.documentElement.scrollTop; // определем начало отсчета по Y с учетом прокрутки
-      // console.log(document.documentElement.scrollTop);
       let shiftX = event.clientX - elem.getBoundingClientRect().left; // смещение курсора относительно центра объекта по X
       let shiftY = event.clientY - elem.getBoundingClientRect().top; // смещение курсора относительно центра объекта по Y
       moveAt(event.pageX, event.pageY);

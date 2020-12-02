@@ -11,9 +11,10 @@ exports[`Testing <Preview/> Component has rendered correctly 1`] = `
     style={
       Object {
         "background": "#000000",
+        "borderRadius": "10px",
         "height": "376px",
         "overflow": "hidden",
-        "position": "relative",
+        "position": "absolute",
         "width": "282px",
       }
     }

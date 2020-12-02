@@ -90,9 +90,9 @@ function Export({link,settings}) {
   return (
   <>
     <section className='export'>
-      <button className='export__btn' onClick={download}>Save as .png</button>
-      <button className='export__btn' onClick={copyNode}>Copy as HTML5 string</button>
-      <button className='export__btn' onClick={copySettings}>Copy settings</button>
+      <button className='export__btn' id='save_png' onClick={download}>Save as .png</button>
+      <button className='export__btn copy_html' onClick={copyNode}>Copy as HTML5 string</button>
+      <button className='export__btn copy_json' onClick={copySettings}>Copy settings</button>
     </section>
     <p className='notification'></p>
   </>

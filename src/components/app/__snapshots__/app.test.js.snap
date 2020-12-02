@@ -14,6 +14,31 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
     </h1>
   </header>
   <section
+    className="export"
+  >
+    <button
+      className="export__btn save_png"
+      onClick={[Function]}
+    >
+      Save as .png
+    </button>
+    <button
+      className="export__btn copy_html"
+      onClick={[Function]}
+    >
+      Copy as HTML5 string
+    </button>
+    <button
+      className="export__btn copy_json"
+      onClick={[Function]}
+    >
+      Copy settings
+    </button>
+  </section>
+  <p
+    className="notification"
+  />
+  <section
     className="customization"
   >
     <div
@@ -185,9 +210,10 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
       style={
         Object {
           "background": "#000000",
+          "borderRadius": "10px",
           "height": "376px",
           "overflow": "hidden",
-          "position": "relative",
+          "position": "absolute",
           "width": "282px",
         }
       }
@@ -228,30 +254,5 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
       </div>
     </div>
   </section>
-  <section
-    className="export"
-  >
-    <button
-      className="export__btn"
-      onClick={[Function]}
-    >
-      Save as .png
-    </button>
-    <button
-      className="export__btn"
-      onClick={[Function]}
-    >
-      Copy as HTML5 string
-    </button>
-    <button
-      className="export__btn"
-      onClick={[Function]}
-    >
-      Copy settings
-    </button>
-  </section>
-  <p
-    className="notification"
-  />
 </div>
 `;
