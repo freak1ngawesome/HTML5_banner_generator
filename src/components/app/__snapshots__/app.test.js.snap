@@ -17,7 +17,8 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
     className="export"
   >
     <button
-      className="export__btn save_png"
+      className="export__btn"
+      id="save_png"
       onClick={[Function]}
     >
       Save as .png
@@ -69,6 +70,7 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
             </span>
             <input
               className="customization__form_text"
+              data-test="SizeX"
               onChange={[Function]}
               type="text"
               value="282"
@@ -78,6 +80,7 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
             </span>
             <input
               className="customization__form_text"
+              data-test="SizeY"
               onChange={[Function]}
               type="text"
               value="376"
@@ -97,6 +100,7 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
           >
             <input
               className="customization__form_color"
+              data-test="BGColor"
               onInput={[Function]}
               type="color"
               value="#000000"
@@ -122,6 +126,7 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
           >
             <input
               className="customization__form_color"
+              data-test="FontColor"
               onInput={[Function]}
               type="color"
               value="#ffffff"
@@ -147,6 +152,7 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
           >
             <input
               className="customization__form_text"
+              data-test="FontSize"
               onChange={[Function]}
               type="text"
               value="44"
@@ -166,6 +172,7 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
           >
             <input
               className="customization__form_text"
+              data-test="ImgLink"
               onChange={[Function]}
               type="text"
               value=""
@@ -185,6 +192,7 @@ exports[`Testing <App/> rendering without crush Component has rendered correctly
           >
             <input
               className="customization__form_text"
+              data-test="SiteLink"
               onChange={[Function]}
               type="text"
               value=""

@@ -1,6 +1,6 @@
 // импортируем зависимости
 import {connect} from 'react-redux';
-import {useEffect } from 'react';
+import {useEffect} from 'react';
 import './preview.css';
 import PropTypes from 'prop-types';
 
