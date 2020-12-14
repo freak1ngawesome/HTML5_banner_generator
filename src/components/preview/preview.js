@@ -49,9 +49,9 @@ function Preview({settings}) {
       bannerText.style.cursor = 'text'; // меняем курсор
       bannerText.style.userSelect = 'auto'; // добавляем возможность выделять текст
       bannerText.onmousedown = null; // убираем прослушку нажатия на текст
-      bannerText.addEventListener('blur', () => { // в момент ухода с текста фокуса возвращаем все назад, текст снова в состоянии перемещения
+      bannerText.addEventListener('mouseout', () => { // в момент ухода с текста фокуса возвращаем все назад, текст снова в состоянии перемещения
         bannerText.setAttribute('contenteditable','false');
-        bannerText.style.cursor = 'move';
+        bannerText.style.cursor = 'grab';
         bannerText.style.userSelect = 'none';
         dragAndDrop(bannerText,banner);
         bannerText.onblur = null;
@@ -61,6 +61,7 @@ function Preview({settings}) {
   
   function dragAndDrop (elem,parent){
     elem.onmousedown = function(event) { // по нажатию на объект
+      elem.style.cursor = 'grabbing'
       const startX = parent.getBoundingClientRect().left; // определем начало отсчета по X
       const startY = parent.getBoundingClientRect().top + document.documentElement.scrollTop; // определем начало отсчета по Y с учетом прокрутки
       let shiftX = event.clientX - elem.getBoundingClientRect().left; // смещение курсора относительно центра объекта по X
@@ -80,6 +81,7 @@ function Preview({settings}) {
     
       elem.onmouseup = function() { // отпустить объект, удалить обработчики
         document.removeEventListener('mousemove', onMouseMove);
+        elem.style.cursor = 'grab'
         elem.onmouseup = null;
       };
     };

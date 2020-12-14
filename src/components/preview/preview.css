@@ -1,8 +1,8 @@
 #banner_img:hover{
-  cursor: move;
+  cursor: grab;
 }
 #banner_text:hover{
-  cursor: move;
+  cursor: grab;
   outline: 1px solid #fff;
 }
 .banner{
