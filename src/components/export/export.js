@@ -8,12 +8,9 @@ import PropTypes from 'prop-types';
 function Export({link,settings}) {
 
   // функция для 'скриншота', испольуется библиотека html2canvas, в случае успеха получаем канвас
-   const download = () => {// скроллим страницу вверх, чтобы избежать скролл бара, тк это приводит к ошибке в работе библиотеки html2canvas
+    const download = () => {// скроллим страницу вверх, чтобы избежать скролл бара, тк это приводит к ошибке в работе библиотеки html2canvas
     const node = document.getElementById('capture');
-    window.scrollTo({
-      top: 0,
-      behavior: "instant",
-    });
+    window.scrollTo(0,0);
 
 
     html2canvas(node,{
